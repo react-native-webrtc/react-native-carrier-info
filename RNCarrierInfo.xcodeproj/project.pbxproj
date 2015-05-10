@@ -1,0 +1,264 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C2D4DC0B1AFE5CEB0038CA91 /* RNCarrierInfo.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = C2D4DC0A1AFE5CEB0038CA91 /* RNCarrierInfo.h */; };
+		C2D4DC0D1AFE5CEB0038CA91 /* RNCarrierInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D4DC0C1AFE5CEB0038CA91 /* RNCarrierInfo.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C2D4DC051AFE5CEB0038CA91 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				C2D4DC0B1AFE5CEB0038CA91 /* RNCarrierInfo.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		C2D4DC071AFE5CEB0038CA91 /* libRNCarrierInfo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNCarrierInfo.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2D4DC0A1AFE5CEB0038CA91 /* RNCarrierInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNCarrierInfo.h; sourceTree = "<group>"; };
+		C2D4DC0C1AFE5CEB0038CA91 /* RNCarrierInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNCarrierInfo.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C2D4DC041AFE5CEB0038CA91 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C2D4DBFE1AFE5CEB0038CA91 = {
+			isa = PBXGroup;
+			children = (
+				C2D4DC091AFE5CEB0038CA91 /* RNCarrierInfo */,
+				C2D4DC081AFE5CEB0038CA91 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C2D4DC081AFE5CEB0038CA91 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C2D4DC071AFE5CEB0038CA91 /* libRNCarrierInfo.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C2D4DC091AFE5CEB0038CA91 /* RNCarrierInfo */ = {
+			isa = PBXGroup;
+			children = (
+				C2D4DC0A1AFE5CEB0038CA91 /* RNCarrierInfo.h */,
+				C2D4DC0C1AFE5CEB0038CA91 /* RNCarrierInfo.m */,
+			);
+			path = RNCarrierInfo;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C2D4DC061AFE5CEB0038CA91 /* RNCarrierInfo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C2D4DC1B1AFE5CEB0038CA91 /* Build configuration list for PBXNativeTarget "RNCarrierInfo" */;
+			buildPhases = (
+				C2D4DC031AFE5CEB0038CA91 /* Sources */,
+				C2D4DC041AFE5CEB0038CA91 /* Frameworks */,
+				C2D4DC051AFE5CEB0038CA91 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RNCarrierInfo;
+			productName = RNCarrierInfo;
+			productReference = C2D4DC071AFE5CEB0038CA91 /* libRNCarrierInfo.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C2D4DBFF1AFE5CEB0038CA91 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Anarchic Knight";
+				TargetAttributes = {
+					C2D4DC061AFE5CEB0038CA91 = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+				};
+			};
+			buildConfigurationList = C2D4DC021AFE5CEB0038CA91 /* Build configuration list for PBXProject "RNCarrierInfo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C2D4DBFE1AFE5CEB0038CA91;
+			productRefGroup = C2D4DC081AFE5CEB0038CA91 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C2D4DC061AFE5CEB0038CA91 /* RNCarrierInfo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C2D4DC031AFE5CEB0038CA91 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2D4DC0D1AFE5CEB0038CA91 /* RNCarrierInfo.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		C2D4DC191AFE5CEB0038CA91 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C2D4DC1A1AFE5CEB0038CA91 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C2D4DC1C1AFE5CEB0038CA91 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/node_modules/react-native/React/**",
+					"$(SRCROOT)/../react-native/React/**",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		C2D4DC1D1AFE5CEB0038CA91 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/node_modules/react-native/React/**",
+					"$(SRCROOT)/../react-native/React/**",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C2D4DC021AFE5CEB0038CA91 /* Build configuration list for PBXProject "RNCarrierInfo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2D4DC191AFE5CEB0038CA91 /* Debug */,
+				C2D4DC1A1AFE5CEB0038CA91 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C2D4DC1B1AFE5CEB0038CA91 /* Build configuration list for PBXNativeTarget "RNCarrierInfo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2D4DC1C1AFE5CEB0038CA91 /* Debug */,
+				C2D4DC1D1AFE5CEB0038CA91 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C2D4DBFF1AFE5CEB0038CA91 /* Project object */;
+}

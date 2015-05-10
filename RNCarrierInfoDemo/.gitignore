@@ -1,5 +1,6 @@
+# OSX
+#
 .DS_Store
-node_modules
 
 # Xcode
 #
@@ -19,3 +20,9 @@ DerivedData
 *.hmap
 *.ipa
 *.xcuserstate
+project.xcworkspace
+
+# node.js
+#
+node_modules/
+npm-debug.log

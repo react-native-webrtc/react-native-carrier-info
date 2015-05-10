@@ -1,0 +1,33 @@
+{
+  "name": "react-native-carrier-info",
+  "version": "0.0.2",
+  "description": "React Native module bridge to obtain information about the user’s home cellular service provider.",
+  "main": "index.js",
+  "peerDependencies": {
+    "react-native": "^0.4.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anarchicknight/react-native-carrier-info.git"
+  },
+  "keywords": [
+    "react",
+    "native",
+    "react-native",
+    "bridge",
+    "carrier",
+    "CTTelephonyNetworkInfo",
+    "CTCarrier",
+    "ios",
+    "react-component"
+  ],
+  "author": "Anarchic Knight <anarchicknight@gmail.com> (http://www.anarchicknight.co.uk)",
+  "license": {
+    "type": "MIT",
+    "url": "https://github.com/anarchicknight/react-native-carrier-info/blob/master/LICENSE"
+  },
+  "bugs": {
+    "url": "https://github.com/anarchicknight/react-native-carrier-info/issues"
+  },
+  "homepage": "https://github.com/anarchicknight/react-native-carrier-info#readme"
+}
