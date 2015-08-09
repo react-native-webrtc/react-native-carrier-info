@@ -1,10 +1,10 @@
 {
   "name": "react-native-carrier-info",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "React Native module bridge to obtain information about the user’s home cellular service provider.",
   "main": "index.js",
   "peerDependencies": {
-    "react-native": "^0.4.2"
+    "react-native": ">=0.4.2"
   },
   "repository": {
     "type": "git",
