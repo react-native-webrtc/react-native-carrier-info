@@ -1,3 +1,5 @@
+## 08/01/2017 - This project is no longer actively maintained. It will remain here so it can still be used but there will be no further updates or bug fixes. It likely needs a new major version for the recent changes in RN 0.40. If another user wants to consider taking ownership of the repo then please contact me
+
 # react-native-carrier-info
 
 React Native module bridge to obtain information about the user’s home cellular service provider.
