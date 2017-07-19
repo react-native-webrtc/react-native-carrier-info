@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <RCTBridge.h>
+#import <React/RCTBridgeModule.h>
 
 @interface RNCarrierInfo : NSObject <RCTBridgeModule>
 
