@@ -10,6 +10,11 @@ import com.facebook.react.bridge.Promise;
 
 public class RNCarrierInfoModule extends ReactContextBaseJavaModule {
     private final static String TAG = RNCarrierInfoModule.class.getCanonicalName();
+    private final static String E_NO_CARRIER_NAME = "no_carrier_name";
+    private final static String E_NO_ISO_COUNTRY_CODE = "no_iso_country_code";
+    private final static String E_NO_MOBILE_COUNTRY_CODE = "no_mobile_country_code";
+    private final static String E_NO_MOBILE_NETWORK = "no_mobile_network";
+    private final static String E_NO_NETWORK_OPERATOR = "no_network_operator";
     private TelephonyManager mTelephonyManager;
 
     public RNCarrierInfoModule(ReactApplicationContext reactContext) {
@@ -28,7 +33,7 @@ public class RNCarrierInfoModule extends ReactContextBaseJavaModule {
         if (carrierName != null) {
             promise.resolve(carrierName);
         } else {
-            promise.resolve("nil");
+            promise.reject(E_NO_CARRIER_NAME, null);
         }
     }
 
@@ -38,7 +43,7 @@ public class RNCarrierInfoModule extends ReactContextBaseJavaModule {
         if (iso != null) {
             promise.resolve(iso);
         } else {
-            promise.resolve("nil");
+            promise.reject(E_NO_ISO_COUNTRY_CODE. null);
         }
     }
 
@@ -48,7 +53,7 @@ public class RNCarrierInfoModule extends ReactContextBaseJavaModule {
         if (mcc != null) {
             promise.resolve(mcc);
         } else {
-            promise.resolve("nil");
+            promise.reject(E_NO_MOBILE_COUNTRY_CODE, null);
         }
     }
 
@@ -58,7 +63,7 @@ public class RNCarrierInfoModule extends ReactContextBaseJavaModule {
         if (mnc != null) {
             promise.resolve(mnc);
         } else {
-            promise.resolve("nil");
+            promise.reject(E_NO_MOBILE_NETWORK, null);
         }
     }
 
@@ -69,7 +74,7 @@ public class RNCarrierInfoModule extends ReactContextBaseJavaModule {
         if (operator != null) {
             promise.resolve(operator);
         } else {
-            promise.resolve("nil");
+            promise.reject(E_NO_NETWORK_OPERATOR, null);
         }
     }
 }

@@ -33,7 +33,7 @@ RCT_EXPORT_METHOD(carrierName:(RCTPromiseResolveBlock)resolve
     }
     else
     {
-        resolve(@"nil");
+        reject(@"no_carrier_name", @"Carrier Name cannot be resolved", nil);
     }
 }
 
@@ -48,7 +48,7 @@ RCT_EXPORT_METHOD(isoCountryCode:(RCTPromiseResolveBlock)resolve
     }
     else
     {
-        resolve(@"nil");
+        reject(@"no_iso_country_code", @"ISO country code cannot be resolved", nil);
     }
 }
 
@@ -63,7 +63,7 @@ RCT_EXPORT_METHOD(mobileCountryCode:(RCTPromiseResolveBlock)resolve
     }
     else
     {
-        resolve(@"nil");
+        reject(@"no_mobile_country_code", @"Mobile country code cannot be resolved", nil);
     }
 }
 
@@ -78,7 +78,7 @@ RCT_EXPORT_METHOD(mobileNetworkCode:(RCTPromiseResolveBlock)resolve
     }
     else
     {
-        resolve(@"nil");
+        reject(@"no_mobile_network", @"Mobile network code cannot be resolved", nil);
     }
 }
 
@@ -94,8 +94,9 @@ RCT_EXPORT_METHOD(mobileNetworkOperator:(RCTPromiseResolveBlock)resolve
         resolve(operator);
     }
     else {
-        resolve(@"nil");
+        reject(@"no_network_operator", @"Mobile network operator code cannot be resolved", nil);
     }
 }
 
 @end
+
