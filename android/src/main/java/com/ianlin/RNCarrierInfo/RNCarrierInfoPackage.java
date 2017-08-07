@@ -19,7 +19,7 @@ public class RNCarrierInfoPackage implements ReactPackage {
         return modules;
     }
 
-    @Override
+    // Deprecate RN 0.47
     public List<Class<? extends JavaScriptModule>> createJSModules() {
         return Collections.emptyList();
     }
