@@ -13,6 +13,14 @@ Makes use of the following native classes:
 - Android
   - [TelephonyManager](https://developer.android.com/reference/android/telephony/TelephonyManager.html)
 
+## Version
+
+### 1.0.0
+
+- Android support
+- Promosify all APIs
+- RN 0.47 support
+
 ## API
 
 **All APIs are async functions**
