@@ -33,7 +33,7 @@ public class RNCarrierInfoModule extends ReactContextBaseJavaModule {
         if (carrierName != null) {
             promise.resolve(carrierName);
         } else {
-            promise.reject(E_NO_CARRIER_NAME, null);
+            promise.reject(E_NO_CARRIER_NAME, "No carrier name");
         }
     }
 
@@ -43,7 +43,7 @@ public class RNCarrierInfoModule extends ReactContextBaseJavaModule {
         if (iso != null) {
             promise.resolve(iso);
         } else {
-            promise.reject(E_NO_ISO_COUNTRY_CODE. null);
+            promise.reject(E_NO_ISO_COUNTRY_CODE, "No iso country code");
         }
     }
 
@@ -53,7 +53,7 @@ public class RNCarrierInfoModule extends ReactContextBaseJavaModule {
         if (mcc != null) {
             promise.resolve(mcc);
         } else {
-            promise.reject(E_NO_MOBILE_COUNTRY_CODE, null);
+            promise.reject(E_NO_MOBILE_COUNTRY_CODE, "No mobile country code");
         }
     }
 
@@ -63,7 +63,7 @@ public class RNCarrierInfoModule extends ReactContextBaseJavaModule {
         if (mnc != null) {
             promise.resolve(mnc);
         } else {
-            promise.reject(E_NO_MOBILE_NETWORK, null);
+            promise.reject(E_NO_MOBILE_NETWORK, "No mobile network code");
         }
     }
 
@@ -74,7 +74,7 @@ public class RNCarrierInfoModule extends ReactContextBaseJavaModule {
         if (operator != null) {
             promise.resolve(operator);
         } else {
-            promise.reject(E_NO_NETWORK_OPERATOR, null);
+            promise.reject(E_NO_NETWORK_OPERATOR, "No mobile network operator");
         }
     }
 }
