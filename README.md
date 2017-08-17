@@ -97,7 +97,12 @@ string mobileTechnology() - return radio access technology, e.g. 3g
 
 ## Getting Started (and running the demo project)
 
-### iOS
+### iOS (quick)
+
+1. From inside your project run `npm install mchampanis/react-native-carrier-info --save`
+2. react-native link react-native-carrier-info
+
+### iOS (manual)
 
 1. From inside your project run `npm install react-native-carrier-info --save`
 2. In XCode, in the project navigator, right click `Libraries` ➜ `Add Files to [your project's name]`
@@ -186,6 +191,11 @@ CarrierInfo.mobileNetworkCode()
 CarrierInfo.mobileNetworkOperator()
 .then((result) => {
   Alert.alert('MCC + MNC', result);
+});
+
+CarrierInfo.mobileTechnology()
+.then((result) => {
+  Alert.alert('Radio access technology', result);
 });
 
 ```
