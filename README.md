@@ -15,6 +15,10 @@ Makes use of the following native classes:
 
 ## Version
 
+### 1.0.2
+
+- Added call to get mobile radio access technology (4g, 3g, etc.)
+
 ### 1.0.0
 
 - Android support
@@ -83,6 +87,12 @@ string mobileNetworkCode() - The mobile network code (MNC) for the user’s cell
 
 ```js
 string mobileNetworkOperator() - return MCC + MNC, e.g 46697
+```
+
+### mobileTechnology
+
+```js
+string mobileTechnology() - return radio access technology, e.g. 3g
 ```
 
 ## Getting Started (and running the demo project)

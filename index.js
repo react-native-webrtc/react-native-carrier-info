@@ -1,10 +1,12 @@
 'use strict';
 
 import React from 'react';
+
 import {
 	NativeModules,
 	Platform,
 } from 'react-native';
+
 const _CarrierInfo = require('react-native').NativeModules.RNCarrierInfo;
 
 export default class CarrierInfo {
@@ -31,5 +33,10 @@ export default class CarrierInfo {
 
 	static async mobileNetworkOperator() {
 		return await _CarrierInfo.mobileNetworkOperator();
+	}
+
+	static async mobileTechnology() {
+		if (Platform.OS === 'android') return "unknown";
+		return await _CarrierInfo.mobileTechnology();
 	}
 }
