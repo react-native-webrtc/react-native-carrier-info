@@ -112,6 +112,8 @@ RCT_EXPORT_METHOD(mobileTechnology:(RCTPromiseResolveBlock)resolve
     if ([[[UIDevice currentDevice] systemVersion] compare:@"7.0" options:NSNumericSearch] != NSOrderedAscending)
     {
         CTTelephonyNetworkInfo *nInfo = [CTTelephonyNetworkInfo new];
+
+        /*
         NSLog(@"Current radio access technology: %@", nInfo.currentRadioAccessTechnology);
         [NSNotificationCenter.defaultCenter addObserverForName:CTRadioAccessTechnologyDidChangeNotification
                                                         object:nil
@@ -120,7 +122,7 @@ RCT_EXPORT_METHOD(mobileTechnology:(RCTPromiseResolveBlock)resolve
         {
             NSLog(@"New radio access technology: %@", nInfo.currentRadioAccessTechnology);
         }];
-
+        */
 
         if ([nInfo.currentRadioAccessTechnology isEqualToString:CTRadioAccessTechnologyGPRS]) {
             mobileTechnology = @"2g";
