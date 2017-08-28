@@ -90,11 +90,65 @@ RCT_EXPORT_METHOD(mobileNetworkOperator:(RCTPromiseResolveBlock)resolve
     NSString *mcc = [[nInfo subscriberCellularProvider] mobileCountryCode];
     NSString *mnc = [[nInfo subscriberCellularProvider] mobileNetworkCode];
     NSString *operator = [NSString stringWithFormat: @"%@%@", mcc, mnc];
-    if (operator) {
+    if (operator)
+    {
         resolve(operator);
     }
-    else {
+    else
+    {
         reject(@"no_network_operator", @"Mobile network operator code cannot be resolved", nil);
+    }
+}
+
+RCT_EXPORT_METHOD(mobileTechnology:(RCTPromiseResolveBlock)resolve
+                           rejecter:(RCTPromiseRejectBlock)reject)
+{
+    /*
+    https://stackoverflow.com/questions/11049660/detect-carrier-connection-type-3g-edge-gprs/20840971#20840971
+    */
+
+    NSString* mobileTechnology = [NSString string];
+
+    if ([[[UIDevice currentDevice] systemVersion] compare:@"7.0" options:NSNumericSearch] != NSOrderedAscending)
+    {
+        CTTelephonyNetworkInfo *nInfo = [CTTelephonyNetworkInfo new];
+
+        if ([nInfo.currentRadioAccessTechnology isEqualToString:CTRadioAccessTechnologyGPRS]) {
+            mobileTechnology = @"2g";
+        } else if ([nInfo.currentRadioAccessTechnology isEqualToString:CTRadioAccessTechnologyEdge]) {
+            mobileTechnology = @"2g";
+        } else if ([nInfo.currentRadioAccessTechnology isEqualToString:CTRadioAccessTechnologyWCDMA]) {
+            mobileTechnology = @"3g";
+        } else if ([nInfo.currentRadioAccessTechnology isEqualToString:CTRadioAccessTechnologyHSDPA]) {
+            mobileTechnology = @"3g";
+        } else if ([nInfo.currentRadioAccessTechnology isEqualToString:CTRadioAccessTechnologyHSUPA]) {
+            mobileTechnology = @"3g";
+        } else if ([nInfo.currentRadioAccessTechnology isEqualToString:CTRadioAccessTechnologyCDMA1x]) {
+            mobileTechnology = @"2g";
+        } else if ([nInfo.currentRadioAccessTechnology isEqualToString:CTRadioAccessTechnologyCDMAEVDORev0]) {
+            mobileTechnology = @"3g";
+        } else if ([nInfo.currentRadioAccessTechnology isEqualToString:CTRadioAccessTechnologyCDMAEVDORevA]) {
+            mobileTechnology = @"3g";
+        } else if ([nInfo.currentRadioAccessTechnology isEqualToString:CTRadioAccessTechnologyCDMAEVDORevB]) {
+            mobileTechnology = @"3g";
+        } else if ([nInfo.currentRadioAccessTechnology isEqualToString:CTRadioAccessTechnologyeHRPD]) {
+            mobileTechnology = @"3g";
+        } else if ([nInfo.currentRadioAccessTechnology isEqualToString:CTRadioAccessTechnologyLTE]) {
+            mobileTechnology = @"4g";
+        }
+    }
+    else
+    {
+        mobileTechnology = @"unknown";
+    }
+
+    if(mobileTechnology)
+    {
+        resolve(mobileTechnology);
+    }
+    else
+    {
+        reject(@"no_mobile_technology", @"Mobile radio access technology cannot be resolved", nil);
     }
 }
 

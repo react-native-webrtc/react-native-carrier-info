@@ -2,6 +2,8 @@ package com.ianlin.RNCarrierInfo;
 
 import android.content.Context;
 import android.telephony.TelephonyManager;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
@@ -16,10 +18,12 @@ public class RNCarrierInfoModule extends ReactContextBaseJavaModule {
     private final static String E_NO_MOBILE_NETWORK = "no_mobile_network";
     private final static String E_NO_NETWORK_OPERATOR = "no_network_operator";
     private TelephonyManager mTelephonyManager;
+    private ReactApplicationContext context;
 
     public RNCarrierInfoModule(ReactApplicationContext reactContext) {
         super(reactContext);
         mTelephonyManager = (TelephonyManager) reactContext.getSystemService(Context.TELEPHONY_SERVICE);
+        context = reactContext;
     }
 
     @Override
@@ -76,5 +80,52 @@ public class RNCarrierInfoModule extends ReactContextBaseJavaModule {
         } else {
             promise.reject(E_NO_NETWORK_OPERATOR, "No mobile network operator");
         }
+    }
+
+    @ReactMethod
+    public void mobileTechnology(Promise promise) {
+        ConnectivityManager cm = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo info = cm.getActiveNetworkInfo();
+        String mobileTech = "";
+
+        // if (info.getType() == ConnectivityManager.TYPE_WIFI) {
+        //     mobileTech = "wifi";
+        // }
+
+        if (info != null && info.isConnected()) {
+            if (info.getType() == ConnectivityManager.TYPE_MOBILE) {
+                int networkType = info.getSubtype();
+
+                switch (networkType) {
+                    case TelephonyManager.NETWORK_TYPE_GPRS:
+                    case 16: // TelephonyManager.NETWORK_TYPE_GSM:
+                    case TelephonyManager.NETWORK_TYPE_EDGE:
+                    case TelephonyManager.NETWORK_TYPE_CDMA:
+                    case TelephonyManager.NETWORK_TYPE_1xRTT:
+                    case TelephonyManager.NETWORK_TYPE_IDEN: // if api<8 : replace by 11
+                        mobileTech = "2g";
+                    case TelephonyManager.NETWORK_TYPE_UMTS:
+                    case TelephonyManager.NETWORK_TYPE_EVDO_0:
+                    case TelephonyManager.NETWORK_TYPE_EVDO_A:
+                    case TelephonyManager.NETWORK_TYPE_HSDPA:
+                    case TelephonyManager.NETWORK_TYPE_HSUPA:
+                    case TelephonyManager.NETWORK_TYPE_HSPA:
+                    case TelephonyManager.NETWORK_TYPE_EVDO_B: // if api<9 : replace by 14
+                    case TelephonyManager.NETWORK_TYPE_EHRPD:  // if api<11 : replace by 12
+                    case TelephonyManager.NETWORK_TYPE_HSPAP:  // if api<13 : replace by 15
+                    case 17: // TelephonyManager.NETWORK_TYPE_TD_SCDMA:
+                        mobileTech = "3g";
+                    case TelephonyManager.NETWORK_TYPE_LTE:    // if api<11 : replace by 13
+                    case 18: // TelephonyManager.NETWORK_TYPE_IWLAN:
+                        mobileTech = "4g";
+                    default:
+                        mobileTech = "unknown";
+                }
+            }
+        } else {
+            mobileTech = "unknown";
+        }
+
+        promise.resolve(mobileTech);
     }
 }
