@@ -51,7 +51,7 @@ public class RNCarrierInfoModule extends ReactContextBaseJavaModule {
     public void mobileCountryCode(Promise promise) {
         String networkOperator = mTelephonyManager.getNetworkOperator();
         if (mcc != null) {
-            int mcc = Integer.parseInt(networkOperator.substring(0, 3))
+            int mcc = Integer.parseInt(networkOperator.substring(0, 3));
             promise.resolve(mcc);
         } else {
             promise.reject(E_NO_MOBILE_COUNTRY_CODE, "No mobile country code");
