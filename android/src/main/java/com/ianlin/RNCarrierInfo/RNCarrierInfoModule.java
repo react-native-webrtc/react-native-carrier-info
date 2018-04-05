@@ -50,7 +50,7 @@ public class RNCarrierInfoModule extends ReactContextBaseJavaModule {
     @ReactMethod
     public void mobileCountryCode(Promise promise) {
         String networkOperator = mTelephonyManager.getNetworkOperator();
-        if (mcc != null) {
+        if (networkOperator != null) {
             int mcc = Integer.parseInt(networkOperator.substring(0, 3));
             promise.resolve(mcc);
         } else {
@@ -61,7 +61,7 @@ public class RNCarrierInfoModule extends ReactContextBaseJavaModule {
     @ReactMethod
     public void mobileNetworkCode(Promise promise) {
         String networkOperator = mTelephonyManager.getNetworkOperator();
-        if (mnc != null) {
+        if (networkOperator != null) {
             int mnc = Integer.parseInt(networkOperator.substring(3));
             promise.resolve(mnc);
         } else {
