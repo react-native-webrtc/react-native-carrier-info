@@ -49,8 +49,9 @@ public class RNCarrierInfoModule extends ReactContextBaseJavaModule {
 
     @ReactMethod
     public void mobileCountryCode(Promise promise) {
-        String mcc = mTelephonyManager.getNetworkOperator();
-        if (mcc != null) {
+        String networkOperator = mTelephonyManager.getNetworkOperator();
+        if (networkOperator != null) {
+            int mcc = Integer.parseInt(networkOperator.substring(0, 3));
             promise.resolve(mcc);
         } else {
             promise.reject(E_NO_MOBILE_COUNTRY_CODE, "No mobile country code");
@@ -59,8 +60,9 @@ public class RNCarrierInfoModule extends ReactContextBaseJavaModule {
 
     @ReactMethod
     public void mobileNetworkCode(Promise promise) {
-        String mnc = mTelephonyManager.getNetworkOperator();
-        if (mnc != null) {
+        String networkOperator = mTelephonyManager.getNetworkOperator();
+        if (networkOperator != null) {
+            int mnc = Integer.parseInt(networkOperator.substring(3));
             promise.resolve(mnc);
         } else {
             promise.reject(E_NO_MOBILE_NETWORK, "No mobile network code");
