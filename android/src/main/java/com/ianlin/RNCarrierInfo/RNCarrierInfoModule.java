@@ -29,7 +29,7 @@ public class RNCarrierInfoModule extends ReactContextBaseJavaModule {
 
     @ReactMethod
     public void carrierName(Promise promise) {
-        String carrierName = mTelephonyManager.getNetworkOperatorName();
+        String carrierName = mTelephonyManager.getSimOperatorName();
         if (carrierName != null) {
             promise.resolve(carrierName);
         } else {
@@ -39,7 +39,7 @@ public class RNCarrierInfoModule extends ReactContextBaseJavaModule {
 
     @ReactMethod
     public void isoCountryCode(Promise promise) {
-        String iso = mTelephonyManager.getNetworkCountryIso();
+        String iso = mTelephonyManager.getSimCountryIso();
         if (iso != null) {
             promise.resolve(iso);
         } else {
@@ -47,32 +47,34 @@ public class RNCarrierInfoModule extends ReactContextBaseJavaModule {
         }
     }
 
+    // returns MCC (3 digits)
     @ReactMethod
     public void mobileCountryCode(Promise promise) {
-        String mcc = mTelephonyManager.getNetworkOperator();
-        if (mcc != null) {
-            promise.resolve(mcc);
+        String plmn = mTelephonyManager.getSimOperator();
+        if (plmn != null) {
+            promise.resolve(plmn.substring(0, 3));
         } else {
             promise.reject(E_NO_MOBILE_COUNTRY_CODE, "No mobile country code");
         }
     }
 
+    // returns MNC (2 or 3 digits)
     @ReactMethod
     public void mobileNetworkCode(Promise promise) {
-        String mnc = mTelephonyManager.getNetworkOperator();
-        if (mnc != null) {
-            promise.resolve(mnc);
+        String plmn = mTelephonyManager.getSimOperator();
+        if (plmn != null) {
+            promise.resolve(plmn.substring(3));
         } else {
             promise.reject(E_NO_MOBILE_NETWORK, "No mobile network code");
         }
     }
 
-    // return MCC + MNC, e.g. 46697
+    // return MCC + MNC (5 or 6 digits), e.g. 20601
     @ReactMethod
     public void mobileNetworkOperator(Promise promise) {
-        String operator = mTelephonyManager.getNetworkOperator();
-        if (operator != null) {
-            promise.resolve(operator);
+        String plmn = mTelephonyManager.getSimOperator();
+        if (plmn != null) {
+            promise.resolve(plmn);
         } else {
             promise.reject(E_NO_NETWORK_OPERATOR, "No mobile network operator");
         }
