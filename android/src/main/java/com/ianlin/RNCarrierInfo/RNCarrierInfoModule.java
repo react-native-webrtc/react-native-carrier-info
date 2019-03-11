@@ -30,7 +30,7 @@ public class RNCarrierInfoModule extends ReactContextBaseJavaModule {
     @ReactMethod
     public void carrierName(Promise promise) {
         String carrierName = mTelephonyManager.getSimOperatorName();
-        if (carrierName != null) {
+        if (carrierName != null && !"".equals(carrierName)) {
             promise.resolve(carrierName);
         } else {
             promise.reject(E_NO_CARRIER_NAME, "No carrier name");
@@ -40,7 +40,7 @@ public class RNCarrierInfoModule extends ReactContextBaseJavaModule {
     @ReactMethod
     public void isoCountryCode(Promise promise) {
         String iso = mTelephonyManager.getSimCountryIso();
-        if (iso != null) {
+        if (iso != null && !"".equals(iso)) {
             promise.resolve(iso);
         } else {
             promise.reject(E_NO_ISO_COUNTRY_CODE, "No iso country code");
@@ -51,7 +51,7 @@ public class RNCarrierInfoModule extends ReactContextBaseJavaModule {
     @ReactMethod
     public void mobileCountryCode(Promise promise) {
         String plmn = mTelephonyManager.getSimOperator();
-        if (plmn != null) {
+        if (plmn != null && !"".equals(plmn)) {
             promise.resolve(plmn.substring(0, 3));
         } else {
             promise.reject(E_NO_MOBILE_COUNTRY_CODE, "No mobile country code");
@@ -62,7 +62,7 @@ public class RNCarrierInfoModule extends ReactContextBaseJavaModule {
     @ReactMethod
     public void mobileNetworkCode(Promise promise) {
         String plmn = mTelephonyManager.getSimOperator();
-        if (plmn != null) {
+        if (plmn != null && !"".equals(plmn)) {
             promise.resolve(plmn.substring(3));
         } else {
             promise.reject(E_NO_MOBILE_NETWORK, "No mobile network code");
@@ -73,7 +73,7 @@ public class RNCarrierInfoModule extends ReactContextBaseJavaModule {
     @ReactMethod
     public void mobileNetworkOperator(Promise promise) {
         String plmn = mTelephonyManager.getSimOperator();
-        if (plmn != null) {
+        if (plmn != null && !"".equals(plmn)) {
             promise.resolve(plmn);
         } else {
             promise.reject(E_NO_NETWORK_OPERATOR, "No mobile network operator");
