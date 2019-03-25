@@ -182,9 +182,9 @@ CarrierInfo.mobileNetworkOperator()
 
 There is an example project supplied with the repo in the RNCarrierInfoDemo folder. The sample app needs to be run on a device as the simulator does not report cellular provider info.
 
-## Contributing
+## Original Author:
 
-Any pull requests, issue reports and suggestion are highly welcome.
+[![anarchicknight](https://avatars1.githubusercontent.com/u/11375227?s=48)](https://github.com/anarchicknight)
 
 ## License
 
